@@ -1,0 +1,83 @@
+<!--Header-->
+
+<p class="HEADER" fxFlexAlign="center">CAREERS</p>
+
+
+<!--Input Box-->
+<div class="rows">
+
+    <div class="row-1">
+        <div class="boxcontainer">
+            <table class="elementscontainer">
+                <tr>
+                    <td>
+                        <a href="" class="cont"><img src="assets\search.png" alt=""> </a>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="search" placeholder="Search here" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row-2">
+        <div class="row-2-1">
+            <p id="font">Country</p>
+        </div>
+        <div class="row-2-2">
+            <input id="input" type="text" placeholder="India">
+        </div>
+    </div>
+    <div class="row-3">
+        <div class="row-3-1">
+            <p id="font">Locations</p>
+        </div>
+        <div class="row-3-2">
+            <input id="input" type="text" placeholder="All">
+        </div>
+    </div>
+    <div class="row-4">
+        <div class="row-4-1">
+            <p id="font">Category</p>
+        </div>
+        <div class="row-4-2">
+            <input id="input" type="text" placeholder="All">
+        </div>
+    </div>
+    <div class="row-5">
+        <div class="row-5-1">
+            <p id="font">Language</p>
+        </div>
+        <div class="row-5-2">
+            <input id="input" type="text" placeholder="All">
+        </div>
+    </div>
+
+</div>
+
+<!--Card Section-->
+
+<div class="container">
+    <div class="row" *ngIf="(items | filter: filteredString).length > 0; else noResults">
+        <div class="card" id="card1" *ngFor="let job of items | filter:filteredString">
+
+            <div class="position">
+                <div class="title-head">
+                    <h1 class="font-1"> {{job.name | uppercase }} </h1>
+                </div>
+                <div class="descrip">
+                    <p class="font"> {{job.description}} </p>
+                </div>
+            </div>
+
+            <div class="apply">
+                <button style="cursor: pointer;">Apply Now</button>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noResults>
+        <p class="no-result">No results found for "{{filteredString}}"</p>
+    </ng-template>
+
+</div>
