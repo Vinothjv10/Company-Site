@@ -14,9 +14,21 @@ export class CareerPageComponent implements OnInit {
 
   items = [
     {
-      name: "sfs",
-      description: "sdfsf",
-    }
+      name: "Insta",
+      description: "Create an account or log in to Instagram - A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family",
+    },
+    {
+      name:"Twitter",
+      description:"Twitter is an American microblogging and social networking service on which users post and interact with messages known as twitter"
+    },
+    {
+      name: "Google",
+      description: "Create an account or log in to Instagram - A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family",
+    },
+    {
+      name:"FaceBook",
+      description:"Twitter is an American microblogging and social networking service on which users post and interact with messages known as twitter"
+    },
   ];
 
   constructor() { }
